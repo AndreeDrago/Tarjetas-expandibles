@@ -1,0 +1,67 @@
+#t0 {
+    background-image: url(Imagenes/gta6.jpg);
+}
+
+#t1 {
+    background-image: url(Imagenes/hogwarts-legacy.jpg);
+}
+
+#t2 {
+    background-image: url(Imagenes/horizon-ii.jpg);
+}
+
+#t3 {
+    background-image: url(Imagenes/need-for-speed-unbound.jpg);
+}
+
+#t4 {
+    background-image: url(Imagenes/stray.jpg);
+}
+
+.tarjetas {
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    background: black;
+}
+
+.tarjeta {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    border-radius: 70px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 500ms ease-in;
+}
+
+.tarjeta h3 {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.tarjeta.active {
+    flex: 5;
+}
+
+.tarjeta.active h3 {
+    opacity: 1;
+    margin-left: .1em;
+    transform: opacity 0.3s ease-in 4.0s;
+}
+
+
+
+@media (max-width: 767px) {
+    .tarjeta:nth-of-type(4),
+    .tarjeta:nth-of-type(5) {
+      display: none;
+    }
+  }
